@@ -1,0 +1,176 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hon Bookstore</title>
+    <!--CSS File-->
+    <link rel="stylesheet" href="./css/add.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <!--JS files-->
+    <!--script src="data/books.js"></script-->
+    <script src="js/common.js"></script>
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background: darkslategrey">
+        <button type="button" id="sidebarCollapse" class="btn btn-link d-block d-md-none">
+            <i class="bx bx-menu icon-single"></i>
+        </button>
+
+        <img src="./images/hon1.jpg" alt="hon1" class="logo" width="60" height="50"></imag>
+
+        <ul class="navbar-nav mr-auto" id="navleft">
+            <li class="nav-item active">
+                <a class="nav-link" href="./Honbookstore.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <!-- Categories -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Categories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Art & Photography</a>
+                    <a class="dropdown-item" href="#">Children's Boos</a>
+                    <a class="dropdown-item" href="#">History</a>
+                    <a class="dropdown-item" href="#">Literature & Fiction</a>
+                    <a class="dropdown-item" href="#">Romance</a>
+                    <a class="dropdown-item" href="#">Science Fiction & Fantasy</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Sales</a>
+                </div>
+            </li>
+
+        </ul>
+
+        <!-- Search Bar -->
+        <div class="collapse navbar-collapse">
+            <form class="form-inline my-2 my-lg-0" id="searchbox">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" id="searchBar">
+                <button class="btn btn-success my-2 my-sm-0" type="submit" id="search"
+                    onclick="search(event)">search</button>
+            </form>
+
+            <ul class="navbar-nav" id="navright">
+                <!-- View cart -->
+                <!-- Icon from font-awesome -->
+                <li class="nav-item" id="cart">
+                    <a href="#!" class="nav-link navbar-link-2 waves-effect">
+                        <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <!-- Sign up link -->
+                <li class="nav-item pl-2 mb-2 mb-md-0 d-md-none d-xl-inline-block" id="signup">
+                    <a href="#!" type="button"
+                        class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light">Sign
+                        up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--Navbar End-->
+    <!-- add books picture and information -->
+    <div class="container">
+        <h2>Add new books information</h2>
+        <form action="display.php" method="post" enctype="multipart/form-data">
+            <div class="col-25">
+                <label class="label"> book title :</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="title">
+            </div>
+            <div class="col-25">
+                <label>book price :</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="price">
+            </div>
+            <div class="col-25">
+                <label>book rating:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="rating">
+            </div>
+            <div class="col-25">
+                <label>book imageUrl:</label>
+            </div>
+            <div class="col-75">
+                <input type="file" name="imageUrl">
+            </div>
+            <div class="col-25">
+                <label>book slide1:</label>
+            </div>
+            <div class="col-75">
+                <input type="file" name="slide1">
+            </div>
+            <div class="col-25">
+                <label>book slide2:</label>
+            </div>
+            <div class="col-75">
+                <input type="file" name="slide2">
+            </div>
+            <div class="col-25">
+                <label>book's description</label><br />
+            </div>
+            <div class="col-75">
+                <textarea rows="8" cols="83" type="text" name="description"></textarea>
+            </div>
+            <div class="row">
+                <input type="submit" name="add">
+                <input type="reset" name="reset">
+            </div>
+        </form>
+    </div>
+
+    <!--footer-->
+    <div class="footer">
+        <div class="footer-bottom">&copy; honbookstore.com | Designed by Hassan Ali , Minghui Liao & Kefen Yan </div>
+        <div class="footer-content">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-section about">
+                        <h4>About Us</h4>
+                        <p style="font-family:Arial"> this bookstore offer the best service in purchasing any books by
+                            putting customer
+                            satisfaction first.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-section links">
+                        <h4> links</h4>
+                        <a href="#" style="font-family:Arial"">Home</a> 
+                        <a href=" #" style="font-family: Arial;">Search Result</a>
+                        <a href="#" style="font-family: Arial;">Product info</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-section contact-form">
+                        <h4>Contact Us</h4>
+                        <h5 style="font-family: 'Arial';">(613)-167-3460</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section contact-form"></div>
+        </div>
+    </div>
+    <!--//footer-->
+</body>
+
+</html>

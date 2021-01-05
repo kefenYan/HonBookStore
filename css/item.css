@@ -1,0 +1,133 @@
+/* logo */
+.logo  {
+    width: 100px;
+}
+
+.header {
+    background:white;
+}
+
+/* Navbar */
+NAV {
+    width: 100%;
+}  
+#searchbox {
+    width: 77%;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+#searchBar {
+    width: calc(100% - 100px);
+}
+#viewcart {
+    margin-right: 5px;
+}
+.container {
+    margin-top:100px;
+}
+/* formt newarrival */
+.newarrival {
+    background: green ;
+    width: 50px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+/* insert 3 of image */
+.col-md-5 {
+    text-align:center ;
+    margin-top: 15;
+}
+
+.col-md-5 img {
+    text-align:center ; 
+    margin-bottom: 5px;
+}
+
+/* price,Availability,Condition */
+.col-md-7 h2 {
+    color:#555;
+}
+
+.price {
+    color: #fe980f;
+    font-size:26px;
+    font-weight:blod;
+    padding-top:20px;
+}
+
+input {
+    border: 1px solid #ccc;
+    font-weight:bold;
+    height:40px;
+    text-align:center;
+    width:30px;
+}
+/* change coloe for cart */
+#cart
+{
+    background: #f5ba71;
+    color:#f5efef;
+    font-size:20px; 
+    border-radius: 5px;  
+}
+/* bold quantity */
+.quantity{
+  font-weight: bold;
+}
+#description{
+    text-align: justify;
+}
+
+/* stars */
+.stars-outer {
+    display: inline-block;
+    position: relative;
+    font-family: FontAwesome;
+}
+  
+.stars-outer::before {
+    content: "\f006 \f006 \f006 \f006 \f006";
+}
+  
+.stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+}
+  
+.stars-inner::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    color: #f8ce0b;
+}
+
+/* footer */
+.footer {
+    background: darkslategrey;
+    color: white;
+    height: 210px;
+    position: relative;
+    top: 30px;
+}
+
+.footer-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-bottom {
+    font-size: 15px;
+    background: #343a40;
+    color: #f2f2f2;
+    height: 50px;   
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding: 20px;
+}
+
